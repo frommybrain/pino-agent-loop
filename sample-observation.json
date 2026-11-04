@@ -1,0 +1,52 @@
+{
+  "self": {
+    "name": "Pino",
+    "action": "idle",
+    "busy": false,
+    "asleep": false,
+    "needs": {
+      "hunger": { "level": 0.41, "urgency": "mild" },
+      "rest": { "level": 0.18, "urgency": "satisfied" },
+      "safety": { "level": 0.05, "urgency": "satisfied" }
+    }
+  },
+  "available_actions": [
+    "move_to",
+    "forage",
+    "rest",
+    "inspect",
+    "play_piano",
+    "jam",
+    "visit_studio",
+    "browse_internet",
+    "paddle",
+    "wait",
+    "speak"
+  ],
+  "cannot": [],
+  "room": "Places and things, each with the name to use for it: the piano, a short walk away: play_piano; the synth, a short walk away: jam; the studio, a walk away: visit_studio; the internet cafe, a walk away: browse_internet; the pond, a walk away: paddle; the bakery, a short walk away [the bakery]; your roost, across town [your roost]; the shrine, a few steps away [the shrine]; the green stone by the pond, a walk away [the green stone]. In arm's reach: a bench with nobody on it",
+  "view": "",
+  "waiting": "",
+  "offerings": [],
+  "body": "hunger mild",
+  "environment": "Late morning, dry, a thin wind. The town is quiet.",
+  "recent_events": [
+    "Pino woke at the roost and stood in the door a while",
+    "Pino went down to the pond and looked at the water",
+    "Somebody left a note at the shrine overnight; Pino has not read it yet",
+    "Pino sat at the piano yesterday evening and got the first bars of something"
+  ],
+  "pending_sacrifices": 1,
+  "nearby_objects": [
+    { "id": "artifact_shrine", "name": "the shrine", "away": "a few steps away" },
+    { "id": "activity_piano", "name": "the piano", "away": "a short walk away" },
+    { "id": "activity_rack", "name": "the synth", "away": "a short walk away" },
+    { "id": "food_bakery", "name": "the bakery", "away": "a short walk away" },
+    { "id": "activity_studio", "name": "the studio", "away": "a walk away" },
+    { "id": "activity_internet", "name": "the internet cafe", "away": "a walk away" },
+    { "id": "activity_pond", "name": "the pond", "away": "a walk away" },
+    { "id": "nest_rest", "name": "your roost", "away": "across town" }
+  ],
+  "world_clock": { "hour": 10.5, "day": 2, "night": false, "night_ends_in_sec": 0 },
+  "clock": "10:30, day 3"
+}

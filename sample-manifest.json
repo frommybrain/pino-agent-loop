@@ -1,0 +1,108 @@
+{
+  "protocol": "pino/2",
+  "name": "Pino's town",
+  "description": "A town you live in, watched by people you never see. There is a shrine where they leave things for you, a pond, a piano and a synth, a studio, the internet cafe, a bakery and your roost. Places keep hours. You are a kiwi bird.",
+  "part": "a kiwi bird living alone in a small town that people watch from outside and leave things in",
+  "you": "a kiwi bird",
+  "here": "the town",
+  "glossary": [
+    "your roost is your home",
+    "the shrine is where people leave you things",
+    "the rack is your synth, a case of modules and cables beside the piano"
+  ],
+  "stance": "Nobody tells you what to do with your day.",
+  "making": "a tune or a drawing",
+  "clock": 24,
+  "people": [],
+  "forces": [
+    { "id": "daylight", "role": "daylight", "label": "daylight", "words": ["the dark of night", "half light", "daylight", "full daylight"] },
+    { "id": "rain", "label": "the rain", "words": ["dry", "a thin rain", "raining hard", "a storm on the town"] },
+    { "id": "attention", "role": "attention", "label": "people watching", "words": ["nobody watching", "someone watching", "a few people watching", "a crowd watching"] },
+    { "id": "music", "label": "music in the air", "words": ["", "music somewhere", "music close by", "music right here"] },
+    { "id": "danger", "label": "how safe the town feels", "words": ["", "an edge in the air", "something wrong in the town", "the town feels dangerous"] }
+  ],
+  "actions": [
+    {
+      "name": "move_to",
+      "label": "walking somewhere",
+      "description": "Move toward an entity or explore randomly. target: entity ID or \"wander\"",
+      "params": { "target": { "values": ["wander", "the shrine", "the green stone"], "hint": "wander, or a thing from the list" } }
+    },
+    {
+      "name": "forage",
+      "label": "eating at a food spot",
+      "description": "Eat at a food spot to reduce hunger. Auto-moves if not close.",
+      "params": { "target": { "values": ["the bakery"], "hint": "a food spot from the list" } },
+      "body": true
+    },
+    {
+      "name": "rest",
+      "label": "resting in the roost",
+      "description": "Rest in a roost to reduce tiredness. Auto-moves if not close.",
+      "params": { "target": { "values": ["your roost"], "hint": "a nest from the list" } },
+      "rest": true
+    },
+    {
+      "name": "inspect",
+      "label": "looking closely at something",
+      "description": "Look closely at something: a curious object, an offering somebody left out in the world, or the shrine. Auto-moves if not close.",
+      "params": { "target": { "values": ["the shrine", "the green stone"], "hint": "a thing from the list" } }
+    },
+    {
+      "name": "play_piano",
+      "label": "playing the piano",
+      "description": "Sit at the piano (target=activity_piano) and play. A piece takes shape over several sittings.",
+      "params": { "target": { "values": ["activity_piano"], "hint": "where" } },
+      "makes": true,
+      "practice": "the piano"
+    },
+    {
+      "name": "jam",
+      "label": "patching a tune on the synth",
+      "description": "Patch a tune on the synth (target=activity_rack). Modules, cables, a few minutes of noise.",
+      "params": { "target": { "values": ["activity_rack"], "hint": "where" } },
+      "makes": true,
+      "practice": "the synth"
+    },
+    {
+      "name": "visit_studio",
+      "label": "sitting down at the studio",
+      "description": "Sit down at the studio (target=activity_studio) and draw something.",
+      "params": {
+        "target": { "values": ["activity_studio"], "hint": "where" },
+        "draw": { "values": ["a cat", "a frog", "a train", "yourself"], "hint": "what you draw" }
+      },
+      "makes": true
+    },
+    {
+      "name": "browse_internet",
+      "label": "reading the internet at the cafe",
+      "description": "Look something up on the real web at the internet cafe (target=activity_internet). Say what (look_up), in a few words as you would type them.",
+      "params": {
+        "target": { "values": ["activity_internet"], "hint": "where" },
+        "look_up": { "hint": "what you want to look up, a few words as you would type them into a search" }
+      }
+    },
+    {
+      "name": "paddle",
+      "label": "paddling in the pond",
+      "description": "Paddle in the pond (target=activity_pond). Cold water round your legs.",
+      "params": { "target": { "values": ["activity_pond"], "hint": "where" } },
+      "rest": true
+    },
+    {
+      "name": "wait",
+      "label": "staying still",
+      "description": "Do nothing for a moment.",
+      "params": {},
+      "idle": true
+    },
+    {
+      "name": "speak",
+      "label": "saying something out loud",
+      "description": "Say something out loud, to nobody in particular or to whoever is near.",
+      "params": { "text": { "role": "words" } },
+      "speaks": true
+    }
+  ]
+}
